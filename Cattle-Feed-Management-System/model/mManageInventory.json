@@ -11,6 +11,18 @@
 			"stInv" 	: 70,
 			"disInv"	: 30,
 			"remainInv"	: 40
+		},
+		{
+			"itmName"	:"Grass",
+			"stInv" 	: 90,
+			"disInv"	: 50,
+			"remainInv"	: 40
+		},
+		{
+			"itmName"	:"Straw",
+			"stInv" 	: 65,
+			"disInv"	: 15,
+			"remainInv"	: 50
 		}
 	]
 	

@@ -1,12 +1,11 @@
 <?php
-	$title = "User List Page";
+	$title = "Management Inventory Page";
 	include('header.php');
 
 	
 ?>
 
-	<a href="aHome.php">Back</a> |
-	<a href="../controller/logout.php">logout</a>	
+	<a href="mHome.php">Back</a>	
 	<br>
 	
 	<h1>Invertory list</h1>

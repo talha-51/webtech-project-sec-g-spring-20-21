@@ -1,6 +1,6 @@
 <?php
 	//session_start();
-	$title = "Home Page";
+	$title = "Farmer Home Page";
 	include('header.php');
 ?>
 	

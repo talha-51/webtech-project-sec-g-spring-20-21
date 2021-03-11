@@ -1,6 +1,6 @@
 <?php
 	//session_start();
-	$title = "Home Page";
+	$title = "Admin Home Page";
 	include('header.php');
 ?>
 	
