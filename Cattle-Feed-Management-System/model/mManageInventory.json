@@ -1,0 +1,17 @@
+{
+	"users":[
+		{
+			"itmName"	:"Rice",
+			"stInv" 	: 50,
+			"disInv"	: 20,
+			"remainInv"	: 30
+		},
+		{
+			"itmName"	:"Weet",
+			"stInv" 	: 70,
+			"disInv"	: 30,
+			"remainInv"	: 40
+		}
+	]
+	
+}
