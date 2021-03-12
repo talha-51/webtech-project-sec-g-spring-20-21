@@ -23,7 +23,7 @@
                         <a href="mHome.php">Dashboard</a>
                     </li>
                     <li>
-                        <a href="editProfile.php">Edit Profile</a>
+                        <a href="mEditProfile.php">Edit Profile</a>
                     </li>
                     <li>
                         <a href="mProfPicChange.php">Change Profile Picture</a>

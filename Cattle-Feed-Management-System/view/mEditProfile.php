@@ -1,6 +1,6 @@
 <?php
 	//session_start();
-	$title = "Change Profile Picture Page";
+	$title = "Manager Edit Profile Page";
 	include('header.php');
 ?>
 	
@@ -54,34 +54,33 @@
                     </li>
                 </ul>
 			</td>
-            <td>
-                <center>
-                    <form method="post" action="../controller/mProfPicCheck.php" enctype="multipart/form-data">
-                         <fieldset style="width:40%">
-                            <legend>PROFILE PICTURE</legend>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <img src="../asset/user.png" height="100px" width="100">
-                                    </td>
-                                </tr>
-            
-                                <tr>
-                                    <td>
-                                        <input type="file" name="image">
-                                    </td>
-                                </tr>
-            
-                                <tr>
-                                    <td>
-                                        <input type="submit" name="submit" value="Upload">
-                                    </td>
-                                </tr>
-            
-                            </table>
-                        </fieldset>
-                    </form>
-                </center>
+            <td align="center">
+            <form method="post" action="../controller/update.php">
+		        <fieldset style="width:30%">
+			        <legend>EDIT User</legend>
+			        <table>
+				        <tr>
+					        <td>Username</td>
+					        <td><input type="text" name="username" value="m-100"></td>
+				        </tr>
+				        <tr>
+					        <td>Password</td>
+					        <td><input type="password" name="password" value="12"></td>
+				        </tr>
+				
+				        <tr>
+					        <td>Email</td>
+					        <td><input type="email" name="email" value="m1@gmail.com"></td>
+				        </tr>
+				        <tr>
+					        <td></td>
+					        <td>
+						        <input type="submit" name="signup" value="Update"> 
+					        </td>
+				        </tr>
+			        </table>
+		        </fieldset>
+	        </form>
 			</td>
 		</tr>			
 	</table>
