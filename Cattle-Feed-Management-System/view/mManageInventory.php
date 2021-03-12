@@ -16,7 +16,7 @@
 
 	echo "<h4>Ingredient</h4>";
 
-	foreach($json['users'] as $usr){
+	foreach($json['inventory'] as $usr){
 
 			echo "<li>Item: ".$usr['itmName']."</li>";
 			echo "<li>Starting Invetory: ".$usr['stInv']."</li>";
