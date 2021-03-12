@@ -12,7 +12,7 @@
 			</td>
 			
 			<td align="right">
-				Loggedin as <?php echo $_SESSION['current_user']['username']; ?>| <a href="../controller/logout.php"> Logout</a>
+				Loggedin as <?php echo $_SESSION['username']; ?>| <a href="../controller/logout.php"> Logout</a>
 			</td>
 		</tr>
 		
@@ -55,7 +55,7 @@
                 </ul>
 			</td>
             <td>
-				<h1>Welcome Home, <?php echo $_SESSION['current_user']['username']; ?></h1>
+				<h1>Welcome Home, <?php echo $_SESSION['username']; ?></h1>
 			</td>
 		</tr>			
 	</table>

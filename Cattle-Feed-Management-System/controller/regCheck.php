@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	//session_start();
 
 	if(isset($_POST['signup'])){
 
@@ -13,13 +13,24 @@
 		}else{
 			if($password == $repass){
 
-				$user = ['username'=> $username, 'password'=> $password, 'email'=>$email];
+				$current_data = file_get_contents('../model/logInfo.json');
+				$array_data = json_decode($current_data,true);
+				$new_data = array(
+							'username' => $username,
+							'password' => $password,
+							'email' => $email
+				);
 
-				//$_SESSION['username'] = $username;
-				//$_SESSION['password'] = $password;
-				$_SESSION['current_user'] = $user;
+				$array_data["users"][] =$new_data;
+				$json_data = json_encode($array_data, JSON_PRETTY_PRINT);
 
-				header('location: ../view/login.html');
+				if(file_put_contents('../model/logInfo.json', $json_data)){
+					header('location: ../view/login.html');
+				}else{
+					echo "error";
+				}
+
+				
 			}else{
 				echo "password & confirm password mismatch...";
 			}
