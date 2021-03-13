@@ -38,12 +38,6 @@
 						<a href="transactionHistory.php"> View Transaction History</a>
                     </li>
 					<li>
-						<a href="transactionHistory.php"> View Transaction History</a>
-                    </li>
-					<li>
-						<a href="cattleHealthDetails.php"> View Cattle Health Details</a>
-                    </li>
-					<li>
 						<a href="cattleHealthDetails.php"> View Cattle Health Details</a>
                     </li>
 					<li>

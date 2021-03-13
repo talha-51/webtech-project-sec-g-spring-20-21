@@ -1,9 +1,10 @@
 <?php
 	//session_start();
-	$title = "Admin Home Page";
+	$title = "Admin Edit Profile Page";
 	include('header.php');
 ?>
 	
+
 	<table border="1" width="70%" align="center">
 		<tr>
 			<td>
@@ -47,11 +48,38 @@
                     </li>
                 </ul>
 			</td>
-            <td>
-				<h1>Welcome Home, <?php echo $_SESSION['username']; ?></h1>
+            <td align="center">
+            <form method="" action="">
+		        <fieldset style="width:30%">
+			        <legend>EDIT User</legend>
+			        <table>
+				        <tr>
+					        <td>Username</td>
+					        <td><input type="text" name="username" value="admin"></td>
+				        </tr>
+				        <tr>
+					        <td>Password</td>
+					        <td><input type="password" name="password" value="11"></td>
+				        </tr>
+				
+				        <tr>
+					        <td>Email</td>
+					        <td><input type="email" name="email" value="admin@gmail.com"></td>
+				        </tr>
+				        <tr>
+					        <td></td>
+					        <td>
+						        <input type="submit" name="signup" value="Update"> 
+					        </td>
+				        </tr>
+			        </table>
+		        </fieldset>
+	        </form>
 			</td>
 		</tr>			
 	</table>
+
+
 
 <?php
 	include('footer.php');
