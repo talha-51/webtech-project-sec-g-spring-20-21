@@ -1,9 +1,10 @@
 <?php
 	//session_start();
-	$title = "Admin Home Page";
+	$title = "Change Profile Picture Page";
 	include('header.php');
 ?>
 	
+
 	<table border="1" width="70%" align="center">
 		<tr>
 			<td>
@@ -48,10 +49,38 @@
                 </ul>
 			</td>
             <td>
-				<h1>Welcome Home, <?php echo $_SESSION['username']; ?></h1>
+                <center>
+                    <form method="post" action="../controller/aProfPicCheck.php" enctype="multipart/form-data">
+                         <fieldset style="width:40%">
+                            <legend>PROFILE PICTURE</legend>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="../asset/user.png" height="100px" width="100">
+                                    </td>
+                                </tr>
+            
+                                <tr>
+                                    <td>
+                                        <input type="file" name="image">
+                                    </td>
+                                </tr>
+            
+                                <tr>
+                                    <td>
+                                        <input type="submit" name="submit" value="Upload">
+                                    </td>
+                                </tr>
+            
+                            </table>
+                        </fieldset>
+                    </form>
+                </center>
 			</td>
 		</tr>			
 	</table>
+
+
 
 <?php
 	include('footer.php');
