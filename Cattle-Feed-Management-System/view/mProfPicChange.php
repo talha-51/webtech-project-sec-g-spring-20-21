@@ -4,20 +4,20 @@
 	include('header.php');
 ?>
 	
-
+    <link rel="stylesheet" href="style.css">
 	<table border="1" width="70%" align="center">
-		<tr>
+		<tr class="c1">
 			<td>
 				<img src="../asset/logo.png" alt="logo" width="100px" height="50px">
 			</td>
 			
 			<td align="right">
-				Loggedin as <?php echo $_SESSION['username']; ?>| <a href="../controller/logout.php"> Logout</a>
+				Loggedin as <b style="color:Tomato"> <?php echo $_SESSION['username']; ?>| <a href="../controller/logout.php"> Logout</a>
 			</td>
 		</tr>
 		
 		<tr style="height:150px;">
-			<td>
+			<td class="c1">
                 <ul>
                     <li>
                         <a href="mHome.php">Dashboard</a>
@@ -38,12 +38,6 @@
 						<a href="transactionHistory.php"> View Transaction History</a>
                     </li>
 					<li>
-						<a href="transactionHistory.php"> View Transaction History</a>
-                    </li>
-					<li>
-						<a href="cattleHealthDetails.php"> View Cattle Health Details</a>
-                    </li>
-					<li>
 						<a href="cattleHealthDetails.php"> View Cattle Health Details</a>
                     </li>
 					<li>
@@ -52,9 +46,18 @@
 					<li>
 						<a href="mManageInventory.php"> Manage Inventory</a>
                     </li>
+                    <li>
+						<a href="farmerPerformane.php"> Farmer Performance</a>
+                    </li>
+					<li>
+						<a href="farmerPayroll.php"> Farmer payroll</a>
+                    </li>
+					<li>
+						<a href="budgetReport.php"> Budget Report</a>
+                    </li>
                 </ul>
 			</td>
-            <td>
+            <td class="c2">
                 <center>
                     <form method="post" action="../controller/mProfPicCheck.php" enctype="multipart/form-data">
                          <fieldset style="width:40%">
@@ -74,7 +77,7 @@
             
                                 <tr>
                                     <td>
-                                        <input type="submit" name="submit" value="Upload">
+                                        <input type="submit" name="submit" value="Upload" class="c5">
                                     </td>
                                 </tr>
             

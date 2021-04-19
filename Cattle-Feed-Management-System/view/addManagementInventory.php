@@ -1,0 +1,99 @@
+<?php
+	$title = "Add Data to Management Inventory Page";
+	include('header.php');
+
+	
+?>
+
+	<a href="mManageInventory.php">Back</a>	
+	<br>
+	
+	<marquee><h1>Add Data to Inventory List</h1></marquee>
+
+    <form method="post" action="../controller/addManagementInventoryCheck.php">
+		<fieldset style="width:30%">
+			<table>
+				<tr>
+					<td>Item</td>
+					<td><input type="text" name="item" id="item" value=""></td>
+					<td><input type="submit" name="click" value="Validate" onmouseover="validateItem()"></td>
+				</tr>
+				<tr>
+					<td>Starting Inventory</td>
+					<td><input type="number" name="sInventory" id="sInventory" value=""></td>
+					<td><input type="submit" name="click" value="Validate" onmouseover="validateSInventory()"></td>
+				</tr>
+				<tr>
+					<td>Distributed Inventory</td>
+					<td><input type="number" name="dInventory" id="dInventory" value=""></td>
+					<td><input type="submit" name="click" value="Validate" onmouseover="validateDInventory()"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+					    <input type="submit" name="submit" value="Update">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+
+	<script>
+		function validateItem(){
+			let item= document.getElementById('item').value;
+			
+			if(item == ""){
+				alert("NULL Value");
+			}
+			else if(item.length < 2){
+				alert("Must contain at least two characters");
+			}
+			else if(item.charAt(0) >= 0 && item.charAt(0) <= 9){
+				alert("Must start with a letter");
+			}
+			else{
+				if((item>= 'a' && item <= 'z') || (item >= 'A' && item <= 'Z') || (item >=0 && item <=9)){						
+					alert("Validation Successfull");
+				}
+				else{
+					alert("Item can contain a-z or A-Z and first character can not be a number");
+				}
+			}
+		}
+
+		function validateSInventory(){
+			let sInventory= document.getElementById('sInventory').value;
+			
+			if(sInventory == ""){
+				alert("NULL Value");
+			}
+			else if(sInventory > 1000 || sInventory < 0){
+				alert("Cattle Amount must be between 1-1000");
+			}
+			else{
+				alert("Validation Successfull");
+			}
+		}
+
+		function validateDInventory(){
+			let dInventory= document.getElementById('dInventory').value;
+			let sInventory= document.getElementById('sInventory').value;
+			
+			if(dInventory == ""){
+				alert("NULL Value");
+			}
+			else if(dInventory < 0){
+				alert("Can not be less than 0");
+			}
+			else if(dInventory > sInventory){
+				alert("Can not be more than Starting Inventory");
+			}
+			else{
+				alert("Validation Successfull");
+			}
+		}
+
+	</script>
+
+
+<?php include('footer.php');?>

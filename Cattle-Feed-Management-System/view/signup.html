@@ -2,11 +2,12 @@
 
 <head>
 	<title>Registration</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 	<table border="1" width="50%" align="center">
-		<tr>
+		<tr class="c1">
 			<td>
 				<img src="../asset/logo.png" alt="logo" width="100px" height="50px">
 			</td>
@@ -17,26 +18,31 @@
 		</tr>
 		
 		<tr style="height:400px">
-			<td colspan="2" align="center">
+			<td colspan="2" align="center" class="c2">
 				<form method="post" action="../controller/regCheck.php">
 					<fieldset style="width:30%">
 						<legend>Sign Up</legend>
 						<table>
 							<tr>
-								<td>Username</td>
-								<td><input type="text" name="username" value=""></td>
+								<td id='myid'>Username</td>
+								<td><input type="text" name="username" id="username" value="" onkeyup="changeUsername()"></td>
+								<td><input type="submit" name="click" value="Validate" onmouseover="validateUserName()"></td>
 							</tr>
 							<tr>
 								<td>Password</td>
-								<td><input type="password" name="password" value=""></td>
+								<td><input type="password" name="password" id="password" value=""></td>
+								<td><input type="submit" name="click" value="Validate" onmouseover="validatePassword()"></td>
 							</tr>
 							<tr>
 								<td>Confirm Password</td>
-								<td><input type="password" name="repass" value=""></td>
+								<td><input type="password" name="repass" id="rePass" value=""></td>
+								<td><input type="submit" name="click" value="Validate" onmouseover="validateRePass()"></td>
+								<td></td>
 							</tr>
 							<tr>
-								<td>Email</td>
-								<td><input type="email" name="email" value=""></td>
+								<td id='myid2'>Email</td>
+								<td><input type="email" name="email" id="email" value="" onkeyup="changeEmail()"></td>
+								<td><input type="submit" name="click" value="Validate" onmouseover="validateEmail()"></td>
 							</tr>
 							<tr>
 								<td></td>
@@ -53,9 +59,92 @@
 		
 		<tr>
 			<td colspan="2" align="center">
-				Copyright @ 2021
+				Copyright @ 2021 
 			</td>
 		</tr>			
 	</table>
+
+	<script>
+		function validateUserName(){
+			let username= document.getElementById('username').value;
+			
+			if(username == ""){
+				alert("NULL Value");
+			}
+			else if(username.length < 2){
+				alert("Username should contain at least two characters");
+			}
+			else if(username.charAt(0) >= 0 && username.charAt(0) <= 9){
+				alert("Username must start with a letter");
+			}
+			else{
+				if((username>= 'a' && username <= 'z') || (username >= 'A' && username <= 'Z') || (username >=0 && username <=9)){						
+					alert("Validation Successfull");
+				}
+				else{
+					alert("Username can contain a-z or A-Z and first character can not be a number");
+				}
+			}
+		}
+
+		function validatePassword(){
+			let password= document.getElementById('password').value;
+			
+			if(password == ""){
+				alert("NULL Value");
+			}
+			else if(password.length < 4){
+				alert("Password must contain at least 4 characters");
+			}
+			else if(password.search(/[0-9]/)== -1){
+				alert("Password must contain at least 1 number");
+			}
+			else if(password.search(/[a-z]/)== -1){
+				alert("Password must contain at least 1 lowercase character");
+			}
+			else if(password.search(/[A-Z]/)== -1){
+				alert("Password must contain at least 1 uppercase character");
+			}
+			else if(password.search(/[!\@\#\$\%\^\&\*\(\)\_\+\<\>\?]/)== -1){
+				alert("Password must contain at least 1 special character");
+			}
+			else{
+				alert("Validation Successfull");
+			}
+		}
+
+		function validateRePass(){
+			let rePass= document.getElementById('rePass').value;
+			let password= document.getElementById('password').value;
+			
+			if(rePass != password){
+				alert("Password & Confirm Password Mismatch");
+			}
+			else{
+				alert("Validation Successfull");
+			}
+		}
+
+		function validateEmail(){
+			let email= document.getElementById('email').value;
+			
+			if(email == ""){
+				alert("NULL Value");
+			}
+			else{
+				alert("Validation Successfull");
+			}
+		}
+
+		function changeUsername(){
+			document.getElementById('myid').innerHTML = document.getElementById('username').value;
+		}
+		function changeEmail(){
+			document.getElementById('myid2').innerHTML = document.getElementById('email').value;
+		}
+
+	</script>
+
+
 </body>
 </html>

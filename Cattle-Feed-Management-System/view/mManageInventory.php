@@ -2,29 +2,45 @@
 	$title = "Management Inventory Page";
 	include('header.php');
 
-	
-?>
+	require_once('../model/inventoryListModel.php');
 
+	$inventoryList = getAllInventoryList();	
+?>
+	<script type="text/javascript" src="managementInventoryScript.js"></script>
+	<link rel="stylesheet" href="style.css">
 	<a href="mHome.php">Back</a>	
 	<br>
 	
-	<h1>Invertory list</h1>
+	<marquee><h1>Invertory list</h1></marquee>
+	<h4><a href='addManagementInventory.php'>Add Data</a> </h4>
 
-<?php
-	$jsondata = file_get_contents('../model/mManageInventory.json', 'r');
-	$json = json_decode($jsondata,true);
+	<form>
+		<input type="text" name="search" id="search" value="" placeholder="Search by Item" onkeyup="ajax()">
+	</form>
 
-	echo "<h4>Ingredient</h4>";
+	<div id='result'></div><br><br>
 
-	foreach($json['inventory'] as $usr){
+	<table border = 1>
+	<tr>
+		<td>Item</td>
+		<td>Starting Inventory</td>
+		<td>Distributed Inventory</td>
+		<td>Remaining Inventory</td>
+		<td>Operations</td>
+	</tr>
 
-			echo "<li>Item: ".$usr['itmName']."</li>";
-			echo "<li>Starting Invetory: ".$usr['stInv']."</li>";
-			echo "<li>Distributed Invetory: ".$usr['disInv']."</li>";
-			echo "<li>Remaining Invetory: ".$usr['remainInv']."</li><br>";
-	}
+	<?php for($i = 0; $i < count($inventoryList); $i++){ ?>
+		<tr>
+			<td><?=$inventoryList[$i]['item']?></td>
+			<td><?=$inventoryList[$i]['sInventory']?></td>
+			<td><?=$inventoryList[$i]['dInventory']?></td>
+			<td><?=$inventoryList[$i]['sInventory'] - $inventoryList[$i]['dInventory'];?></td>
+			<td><a href="editManagementInventory.php?item=<?=$inventoryList[$i]['item']?>"> Edit</a> | 
+				<a href="../controller/deleteManagementInventory.php?item=<?=$inventoryList[$i]['item']?>"> Delete </a>
+			</td>
+		</tr>
+	<?php } ?>
+
+	</table>
 	
-	include('footer.php');
-
-	
-?>
+<?php include('footer.php');?>
