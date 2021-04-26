@@ -4,7 +4,7 @@
 
 	
 ?>
-
+<center>
 	<a href="farmerPerformane.php">Back</a>	
 	<br>
 	
@@ -41,7 +41,7 @@
 			</table>
 		</fieldset>
 	</form>
-
+	</center>
 	<script>
 		function validateFUsername(){
 			let fUsername= document.getElementById('fUsername').value;

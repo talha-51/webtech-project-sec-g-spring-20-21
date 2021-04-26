@@ -24,7 +24,7 @@
 			$status = insertData($data);				
 
 			if($status){
-				header('location: ../view/transactionHistory.php');
+				header('location: ../view/atransactionHistory.php');
 			}else{
 				echo "error..try again";
 			}

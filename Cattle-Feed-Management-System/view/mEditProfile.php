@@ -55,6 +55,12 @@
 					<li>
 						<a href="budgetReport.php"> Budget Report</a>
                     </li>
+					<li>
+						<a href="mAnnouncement.php"> View Announcement</a>
+                    </li>
+					<li>
+						<a href="contactAdmin.php"> Contact Admin</a>
+                    </li>
                 </ul>
 			</td>
             <td align="center" class="c2">
@@ -102,17 +108,8 @@
 			else if(password.length < 4){
 				alert("Password must contain at least 4 characters");
 			}
-			else if(password.search(/[0-9]/)== -1){
-				alert("Password must contain at least 1 number");
-			}
-			else if(password.search(/[a-z]/)== -1){
-				alert("Password must contain at least 1 lowercase character");
-			}
-			else if(password.search(/[A-Z]/)== -1){
-				alert("Password must contain at least 1 uppercase character");
-			}
-			else if(password.search(/[!\@\#\$\%\^\&\*\(\)\_\+\<\>\?]/)== -1){
-				alert("Password must contain at least 1 special character");
+			else if(!password.includes(0) && !password.includes(1) && !password.includes(2) && !password.includes(3) && !password.includes(4) && !password.includes(5) && !password.includes(6) && !password.includes(7) && !password.includes(8) && !password.includes(9)){
+				alert("Password must contain at least 1 Number");
 			}
 			else{
 				alert("Validation Successfull");

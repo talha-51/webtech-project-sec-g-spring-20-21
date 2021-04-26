@@ -4,7 +4,7 @@
 
 	
 ?>
-
+<center>
 	<a href="cattleDetails.php">Back</a>	
 	<br>
 	
@@ -42,7 +42,7 @@
 			        </table>
 		        </fieldset>
 	        </form>
-
+			</center>
 	<script>
 
 		function validateCAmount(){

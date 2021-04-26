@@ -55,6 +55,12 @@
 					<li>
 						<a href="budgetReport.php"> Budget Report</a>
                     </li>
+					<li>
+						<a href="mAnnouncement.php"> View Announcement</a>
+                    </li>
+					<li>
+						<a href="contactAdmin.php"> Contact Admin</a>
+                    </li>
                 </ul>
 			</td>
             <td class="c2">

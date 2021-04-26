@@ -16,10 +16,22 @@
 			$status = validateUser($username, $password);
 
 			if($status){
-				$_SESSION['flag'] = true;
-				$_SESSION['username'] = $username;
+				if($username[0]== 'A'){
+					$_SESSION['flag'] = true;
+					$_SESSION['username'] = $username;
 
-				header('location: ../view/mHome.php');
+					header('location: ../view/home.php');
+				}
+				else if($username[0]== 'M'){
+					$_SESSION['flag'] = true;
+					$_SESSION['username'] = $username;
+
+					header('location: ../view/mHome.php');
+				}
+				else{
+					echo "Invalid User.";
+				}
+				
 			}else{
 				echo "invalid user...";
 			}	

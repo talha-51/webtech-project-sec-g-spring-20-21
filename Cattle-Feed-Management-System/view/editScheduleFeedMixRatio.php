@@ -4,7 +4,7 @@
 
 	
 ?>
-
+<center>
 	<a href="scheduleFeedMixRatio.php">Back</a>	
 	<br>
 	
@@ -41,7 +41,7 @@
 			</table>
 		</fieldset>
 	</form>
-
+	</center>
 	<script>
 
 		function validateFItems(){

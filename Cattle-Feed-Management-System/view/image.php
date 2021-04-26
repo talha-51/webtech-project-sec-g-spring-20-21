@@ -11,6 +11,6 @@
     
 
 <?php	
-    echo '<img src=../asset/'.$_SESSION['profPic'] .'>';
+    echo '<img src=../asset/'.$_SESSION['profPic'] .' width="500" height="300">';
     include('footer.php');
 ?>

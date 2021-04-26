@@ -26,15 +26,6 @@
 		}
 	}
 
-	function getUserByID($id){
-		$conn = getConnection();
-		$sql = "select * from users where id='{$id}";
-		$result = mysqli_query($conn, $sql);
-		$row = mysqli_fetch_assoc($result);
-
-		return $row;
-	}
-
 	function getAllUser(){
 		$conn = getConnection();
 		$sql = "select * from users";
@@ -59,9 +50,9 @@
 		}
 	}
 
-	function deleteUser($id){
+	function deleteUser($username){
 		$conn = getConnection();
-		$sql = "delete from users where id={$id}";
+		$sql = "delete from users where username='{$username}'";
 		
 		if(mysqli_query($conn, $sql)){
 			return true;

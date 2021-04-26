@@ -4,7 +4,7 @@
 
 	
 ?>
-
+<center>
 	<a href="budgetReport.php">Back</a>	
 	<br>
 	
@@ -37,7 +37,7 @@
 			</table>
 		</fieldset>
 	</form>
-
+	</center>
 	<script>
 		function validateFName(){
 			let fUsername= document.getElementById('fUsername').value;

@@ -6,12 +6,13 @@
 
 	$inventoryList = getAllInventoryList();	
 ?>
+<center>
 	<script type="text/javascript" src="managementInventoryScript.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<a href="mHome.php">Back</a>	
 	<br>
 	
-	<marquee><h1>Invertory list</h1></marquee>
+	<marquee><h1>Inventory list</h1></marquee>
 	<h4><a href='addManagementInventory.php'>Add Data</a> </h4>
 
 	<form>
@@ -42,5 +43,5 @@
 	<?php } ?>
 
 	</table>
-	
+	</center>
 <?php include('footer.php');?>

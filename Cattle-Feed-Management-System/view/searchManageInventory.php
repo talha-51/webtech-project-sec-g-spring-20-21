@@ -2,7 +2,7 @@
 	
 	$search = $_REQUEST['search'];
 	$conn = mysqli_connect('localhost', 'root', '', 'cattlefeedmanagementsystem');
-	$sql = "select * from invertory where item like '%{$search}%'";
+	$sql = "select * from inventory where item like '%{$search}%'";
 	$result = mysqli_query($conn, $sql);
 
 	$response = "<table border=1>

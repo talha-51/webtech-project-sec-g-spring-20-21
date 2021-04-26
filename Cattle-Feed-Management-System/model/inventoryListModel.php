@@ -4,7 +4,7 @@
 
 	function getAllInventoryList(){
 		$conn = getConnection();
-		$sql = "select * from invertory";
+		$sql = "select * from inventory";
 		$result = mysqli_query($conn, $sql);
 		$users = [];
 
@@ -17,7 +17,7 @@
 
 	function insertData($data){
 		$conn = getConnection();
-		$sql = "insert into invertory values('{$data['item']}', '{$data['sInventory']}', '{$data['dInventory']}')";
+		$sql = "insert into inventory values('{$data['item']}', '{$data['sInventory']}', '{$data['dInventory']}')";
 		
 		if(mysqli_query($conn, $sql)){
 			return true;
@@ -28,7 +28,7 @@
 
 	function updateData($data){
 		$conn = getConnection();
-		$sql = "UPDATE invertory SET sInventory='{$data['sInventory']}',dInventory='{$data['dInventory']}' WHERE item='{$data['item']}' ";
+		$sql = "UPDATE inventory SET sInventory='{$data['sInventory']}',dInventory='{$data['dInventory']}' WHERE item='{$data['item']}' ";
 
 		if(mysqli_query($conn, $sql)){
 			return true;
@@ -39,7 +39,7 @@
 
 	function deleteData($username){
 		$conn = getConnection();
-		$sql = "delete from invertory where item='{$username}'";
+		$sql = "delete from inventory where item='{$username}'";
 		
 		if(mysqli_query($conn, $sql)){
 			return true;

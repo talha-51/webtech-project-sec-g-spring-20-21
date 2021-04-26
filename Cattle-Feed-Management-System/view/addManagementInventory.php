@@ -4,7 +4,7 @@
 
 	
 ?>
-
+<center>
 	<a href="mManageInventory.php">Back</a>	
 	<br>
 	
@@ -37,7 +37,7 @@
 			</table>
 		</fieldset>
 	</form>
-
+	</center>
 	<script>
 		function validateItem(){
 			let item= document.getElementById('item').value;

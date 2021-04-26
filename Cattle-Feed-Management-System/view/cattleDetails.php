@@ -6,6 +6,7 @@
 
 	$cattleDetails = getAllCattleDetails();	
 ?>
+<center>
 	<script type="text/javascript" src="cattleDetailsScript.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<a href="mHome.php">Back</a>	
@@ -44,5 +45,5 @@
 	<?php } ?>
 
 	</table>
-	
+	</center>
 <?php include('footer.php');?>

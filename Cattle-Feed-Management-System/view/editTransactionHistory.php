@@ -4,8 +4,8 @@
 
 	
 ?>
-
-	<a href="transactionHistory.php">Back</a>	
+<center>
+	<a href="atransactionHistory.php">Back</a>	
 	<br>
 	
 	<marquee><h1>Edit Transaction History</h1></marquee>
@@ -41,7 +41,7 @@
 			</table>
 		</fieldset>
 	</form>
-
+	</center>
 	<script>
 
 		function validateAInvested(){
